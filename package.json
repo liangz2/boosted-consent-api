@@ -1,0 +1,46 @@
+{
+  "name": "consent-api",
+  "version": "1.0.0",
+  "description": "The Consent API for Boosted",
+  "main": "index.js",
+  "repository": "https://github.com/liangz2/boosted-consent-api",
+  "author": "Zhengyi Liang",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.4.3",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.0",
+    "@types/uuid": "^9.0.0",
+    "body-parser": "^1.20.1",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.8.1",
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start:dev": "nodemon src/index.ts",
+    "start:dev:with-mock-data": "WITH_MOCK_DATA=true nodemon src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p ./tsconfig.json",
+    "test": "jest --runInBand",
+    "clear:db": "rm src/db/data/consents.sqlite"
+  }
+}
