@@ -1,5 +1,4 @@
 # Consent API documentation
-==Thank you for taking the time to review my submission==
 
 ## Please run `yarn install`
 
